@@ -52,24 +52,8 @@ TEST(ConstructorTest, NegativeTest) {
     EXPECT_EQ(rect->get_height(), -2);
 }
 
-TEST(ConstructorTest, ZeroTest) {
-    Rectangle* rect = new Rectangle();
-    EXPECT_EQ(rect->get_width(),0);
-    EXPECT_EQ(rect->get_height(), 0);
-}
-TEST(ConstructorTest, PositiveTest) {
-    Rectangle* rect = new Rectangle(1, 2);
-    EXPECT_EQ(rect->get_width(),1);
-    EXPECT_EQ(rect->get_height(), 2);
-}
-TEST(ConstructorTest, NegativeTest) {
-    Rectangle* rect = new Rectangle(-1, -2);
-    EXPECT_EQ(rect->get_width(),-1);
-    EXPECT_EQ(rect->get_height(), -2);
-}
 
 int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
+ ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
-
