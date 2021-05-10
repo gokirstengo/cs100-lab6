@@ -5,6 +5,11 @@ Rectangle::Rectangle(int w, int h){
     this->height = h;
 }
 
+Rectangle::Rectangle(){
+    this->width = 0;
+    this->height = 0;
+}
+
 void Rectangle::set_width(int w) {
     this->width = w;
 }
