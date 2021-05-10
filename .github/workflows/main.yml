@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ Kevin20201/passing_tests ]
   pull_request:
     branches: [ main ]
 
@@ -34,3 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Runs tests for rectangle class
+      - name: Run Rectangle Test Cases
+        run: |
+          git clone --recursive https://github.com/google/googletest.git
+          cmake .
+          make
+          test
