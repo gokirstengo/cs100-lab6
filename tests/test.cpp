@@ -19,6 +19,23 @@ TEST(AreaTest, DoubleNegativeTest) {
     EXPECT_EQ(rect->area(),18);
 }
 
+TEST(PerimeterTest, ZeroTest) {
+    Rectangle* rect = new Rectangle();
+    EXPECT_EQ(rect->perimeter(),0);
+}
+TEST(PerimeterTest, PositiveTest) {
+    Rectangle* rect = new Rectangle(3,5);
+    EXPECT_EQ(rect->perimeter(),16);
+}
+TEST(PerimeterTest, NegativeTest) {
+    Rectangle* rect = new Rectangle(-4,1);
+    EXPECT_EQ(rect->perimeter(),-6);
+}
+TEST(PerimeterTest, DoubleNegativeTest) {
+    Rectangle* rect = new Rectangle(-7,8);
+    EXPECT_EQ(rect->perimeter(),2);
+}
+
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
