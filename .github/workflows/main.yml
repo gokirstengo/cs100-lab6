@@ -41,4 +41,4 @@ jobs:
           git clone --recursive https://github.com/google/googletest.git
           cmake .
           make
-          test
+          ./test
